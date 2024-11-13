@@ -1,0 +1,11 @@
+{
+  "@locale": "en",
+  "appName": "VinchestaStory",
+  "description": "Set valid Api base url in order to continue",
+  "homeScreen": "Home screen",
+  "successCalculations": "All calculations has finished, you can send yout results to server",
+  "sendResultsOnServer": "Send results on server",
+  "startCountingProcess": "Start counting process",
+  "dataSentSuccessfully": "Data sent successfully",
+  "previewScreen": "Preview Screen"
+}

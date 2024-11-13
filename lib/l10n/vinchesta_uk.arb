@@ -1,0 +1,6 @@
+{
+    "@locale": "en",
+    "appName": "TestTask",
+    "description": "Set valid Api base url in order to continue",
+    "homeScreen": "Домашня сторінка"
+}
