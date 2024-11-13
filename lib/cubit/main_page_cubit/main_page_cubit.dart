@@ -68,20 +68,20 @@ class MainPageCubit extends BaseCubit<MainPageState> {
 
       if (coord.x == end.x && coord.y == end.y) return path;
 
-      for (List<int> dir in directions) {
-        int nx = coord.x + dir[0];
-        int ny = coord.y + dir[1];
+      for (List<int> direction in directions) {
+        int coordX = coord.x + direction.first;
+        int coordY = coord.y + direction[1];
 
-        if (nx >= 0 &&
-            nx < rows &&
-            ny >= 0 &&
-            ny < cols &&
-            map[nx][ny] == '.' &&
-            !visited[nx][ny]) {
-          visited[nx][ny] = true;
+        if (coordX >= 0 &&
+            coordX < rows &&
+            coordY >= 0 &&
+            coordY < cols &&
+            map[coordX][coordY] == '.' &&
+            !visited[coordX][coordY]) {
+          visited[coordX][coordY] = true;
           List<Coordinate> newPath = List.from(path);
-          newPath.add(Coordinate(x: nx, y: ny));
-          queue.add([Coordinate(x: nx, y: ny), newPath]);
+          newPath.add(Coordinate(x: coordX, y: coordY));
+          queue.add([Coordinate(x: coordX, y: coordY), newPath]);
         }
       }
     }
