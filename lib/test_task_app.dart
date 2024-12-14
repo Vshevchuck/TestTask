@@ -30,7 +30,7 @@ class TestTaskApp extends StatelessWidget {
             routeInformationProvider: appRouter.routeInfoProvider(),
             routerDelegate: appRouter.delegate(
               deepLinkBuilder: ((deepLink) => const DeepLink(
-                    kDebugMode ? [MainRoute()] : [],
+                    kDebugMode ? [OnboardingRoute()] : [],
                   )),
               navigatorObservers: () => [],
             ),

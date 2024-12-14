@@ -13,18 +13,4 @@ VinchestaRouter get router => locator<VinchestaRouter>();
 @singleton
 class VinchestaRouter extends BaseRouter {
   VinchestaRouter(AppAutoRouter super.router);
-
-  void pushMainPage() async {
-    router.push(const MainRoute());
-  }
-
-  void pushMapPage({
-    required List<String> map,
-    required List<Coordinate> coordinates,
-  }) async {
-    router.push(MapRoute(
-      field: map,
-      coordinates: coordinates,
-    ));
-  }
 }

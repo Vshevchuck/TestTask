@@ -8,90 +8,33 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i3;
-import 'package:flutter/material.dart' as _i4;
-import 'package:test_task/api/model/response/coordinate.dart' as _i5;
-import 'package:test_task/pages/main_page/main_page.dart' as _i1;
-import 'package:test_task/pages/map_page/map_page.dart' as _i2;
+import 'package:auto_route/auto_route.dart' as _i2;
+import 'package:test_task/pages/onboarding_page/onboarding_page.dart' as _i1;
 
-abstract class $AppAutoRouter extends _i3.RootStackRouter {
+abstract class $AppAutoRouter extends _i2.RootStackRouter {
   $AppAutoRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i3.PageFactory> pagesMap = {
-    MainRoute.name: (routeData) {
-      return _i3.AutoRoutePage<dynamic>(
+  final Map<String, _i2.PageFactory> pagesMap = {
+    OnboardingRoute.name: (routeData) {
+      return _i2.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i3.WrappedRoute(child: const _i1.MainPage()),
+        child: const _i1.OnboardingPage(),
       );
-    },
-    MapRoute.name: (routeData) {
-      final args = routeData.argsAs<MapRouteArgs>();
-      return _i3.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i2.MapPage(
-          key: args.key,
-          field: args.field,
-          coordinates: args.coordinates,
-        ),
-      );
-    },
+    }
   };
 }
 
 /// generated route for
-/// [_i1.MainPage]
-class MainRoute extends _i3.PageRouteInfo<void> {
-  const MainRoute({List<_i3.PageRouteInfo>? children})
+/// [_i1.OnboardingPage]
+class OnboardingRoute extends _i2.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i2.PageRouteInfo>? children})
       : super(
-          MainRoute.name,
+          OnboardingRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'MainRoute';
+  static const String name = 'OnboardingRoute';
 
-  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i2.MapPage]
-class MapRoute extends _i3.PageRouteInfo<MapRouteArgs> {
-  MapRoute({
-    _i4.Key? key,
-    required List<String> field,
-    required List<_i5.Coordinate> coordinates,
-    List<_i3.PageRouteInfo>? children,
-  }) : super(
-          MapRoute.name,
-          args: MapRouteArgs(
-            key: key,
-            field: field,
-            coordinates: coordinates,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'MapRoute';
-
-  static const _i3.PageInfo<MapRouteArgs> page =
-      _i3.PageInfo<MapRouteArgs>(name);
-}
-
-class MapRouteArgs {
-  const MapRouteArgs({
-    this.key,
-    required this.field,
-    required this.coordinates,
-  });
-
-  final _i4.Key? key;
-
-  final List<String> field;
-
-  final List<_i5.Coordinate> coordinates;
-
-  @override
-  String toString() {
-    return 'MapRouteArgs{key: $key, field: $field, coordinates: $coordinates}';
-  }
+  static const _i2.PageInfo<void> page = _i2.PageInfo<void>(name);
 }

@@ -38,10 +38,7 @@ class AppAutoRouter extends $AppAutoRouter {
   @override
   final List<AutoRoute> routes = [
     AutoRoute(
-      page: MainRoute.page,
-    ),
-    AutoRoute(
-      page: MapRoute.page,
+      page: OnboardingRoute.page,
     ),
   ];
 }
